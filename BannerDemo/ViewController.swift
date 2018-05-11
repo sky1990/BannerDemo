@@ -2,8 +2,8 @@
 //  ViewController.swift
 //  BannerDemo
 //
-//  Created by 栾士伟 on 17/3/17.
-//  Copyright © 2017年 Luanshiwei. All rights reserved.
+//  Created by 士伟 on 17/3/17.
+//  Copyright © 2017年 shiweiluan. All rights reserved.
 //
 
 import UIKit

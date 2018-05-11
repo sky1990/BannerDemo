@@ -217,7 +217,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0820;
 				LastUpgradeCheck = 0820;
-				ORGANIZATIONNAME = Luanshiwei;
+				ORGANIZATIONNAME = shiweiluan;
 				TargetAttributes = {
 					9758359F1E7BD87C005EAB8F = {
 						CreatedOnToolsVersion = 8.2;
@@ -467,7 +467,7 @@
 				DEVELOPMENT_TEAM = ZQL7QF3KJT;
 				INFOPLIST_FILE = BannerDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Luanshiwei.BannerDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = shiweiluan.BannerDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -481,7 +481,7 @@
 				DEVELOPMENT_TEAM = ZQL7QF3KJT;
 				INFOPLIST_FILE = BannerDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Luanshiwei.BannerDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = shiweiluan.BannerDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -495,7 +495,7 @@
 				DEVELOPMENT_TEAM = ZQL7QF3KJT;
 				INFOPLIST_FILE = BannerDemoTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Luanshiwei.BannerDemoTests;
+				PRODUCT_BUNDLE_IDENTIFIER = shiweiluan.BannerDemoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BannerDemo.app/BannerDemo";
@@ -510,7 +510,7 @@
 				DEVELOPMENT_TEAM = ZQL7QF3KJT;
 				INFOPLIST_FILE = BannerDemoTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Luanshiwei.BannerDemoTests;
+				PRODUCT_BUNDLE_IDENTIFIER = shiweiluan.BannerDemoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BannerDemo.app/BannerDemo";
@@ -524,7 +524,7 @@
 				DEVELOPMENT_TEAM = ZQL7QF3KJT;
 				INFOPLIST_FILE = BannerDemoUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Luanshiwei.BannerDemoUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = shiweiluan.BannerDemoUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = BannerDemo;
@@ -538,7 +538,7 @@
 				DEVELOPMENT_TEAM = ZQL7QF3KJT;
 				INFOPLIST_FILE = BannerDemoUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Luanshiwei.BannerDemoUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = shiweiluan.BannerDemoUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = BannerDemo;

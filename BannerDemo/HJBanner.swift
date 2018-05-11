@@ -2,8 +2,8 @@
 //  HJBanner.swift
 //  BannerDemo
 //
-//  Created by 栾士伟 on 17/3/17.
-//  Copyright © 2017年 Luanshiwei. All rights reserved.
+//  Created by 士伟 on 17/3/17.
+//  Copyright © 2017年 shiweiluan. All rights reserved.
 //
 
 import UIKit
@@ -20,11 +20,11 @@ fileprivate var imageURLArray = [AnyObject]()
 /** 定时器 */
 fileprivate var timer : Timer? = nil
 /** 当前显示的图片在数组中的下标 */
-fileprivate var cycleIndex : NSInteger = 0
+fileprivate var bannerIndex : NSInteger = 0
 /** 左边的图片在数组中的下标 */
-fileprivate var leftCycleIndex : NSInteger = 0
+fileprivate var leftBannerIndex : NSInteger = 0
 /** 右边的图片在数组中的下标 */
-fileprivate var rightCycleIndex : NSInteger = 0
+fileprivate var rightBannerIndex : NSInteger = 0
 /** 左边的图片 */
 fileprivate var leftImageView : UIImageView? = nil
 /** 中间的图片 */
@@ -82,7 +82,7 @@ class HJBannerView: UIView, UIScrollViewDelegate {
                 make.top.equalTo(self).offset(0)
                 make.bottom.equalTo(self).offset(0)
             })
-            cycleIndex = 0
+            bannerIndex = 0
             /** 只有一张图片 */
             if imageURLArray.count == 1 {
                 /** 创建只有一张图的轮播图 */
@@ -95,7 +95,7 @@ class HJBannerView: UIView, UIScrollViewDelegate {
             pageControl?.removeFromSuperview()
             pageControl = UIPageControl()
             pageControl?.numberOfPages = imageURLArray.count
-            pageControl?.currentPage = cycleIndex;
+            pageControl?.currentPage = bannerIndex;
             pageControl?.hidesForSinglePage = true
             pageControl?.pageIndicatorTintColor = UIColor.white
             pageControl?.currentPageIndicatorTintColor = UIColor.red
@@ -116,12 +116,12 @@ class HJBannerView: UIView, UIScrollViewDelegate {
     fileprivate func creatMoreImage() {
         /** 设置滚动范围 */
         scroll?.contentSize = CGSize(width: hjBannerViewWidth! * 3, height: 0)
-        cycleIndex = 0
-        leftCycleIndex = imageURLArray.count - 1
-        rightCycleIndex = cycleIndex + 1
+        bannerIndex = 0
+        leftBannerIndex = imageURLArray.count - 1
+        rightBannerIndex = bannerIndex + 1
         
         leftImageView = UIImageView()
-        leftImageView?.kf.setImage(with: URL(string: imageURLArray[leftCycleIndex] as! String))
+        leftImageView?.kf.setImage(with: URL(string: imageURLArray[leftBannerIndex] as! String))
         leftImageView?.contentMode = .scaleToFill
         scroll?.addSubview(leftImageView!)
         leftImageView?.backgroundColor = UIColor.magenta
@@ -133,7 +133,7 @@ class HJBannerView: UIView, UIScrollViewDelegate {
         })
         
         centerImageView = UIImageView()
-        centerImageView?.kf.setImage(with: URL(string: imageURLArray[cycleIndex] as! String))
+        centerImageView?.kf.setImage(with: URL(string: imageURLArray[bannerIndex] as! String))
         centerImageView?.contentMode = .scaleToFill
         scroll?.addSubview(centerImageView!)
         centerImageView?.backgroundColor = UIColor.magenta
@@ -144,7 +144,7 @@ class HJBannerView: UIView, UIScrollViewDelegate {
             make.height.equalTo(hjBannerViewHeight!)
         })
         rightImageView = UIImageView()
-        rightImageView?.kf.setImage(with: URL(string: imageURLArray[rightCycleIndex] as! String))
+        rightImageView?.kf.setImage(with: URL(string: imageURLArray[rightBannerIndex] as! String))
         rightImageView?.contentMode = .scaleToFill
         scroll?.addSubview(rightImageView!)
         rightImageView?.backgroundColor = UIColor.magenta
@@ -185,7 +185,7 @@ class HJBannerView: UIView, UIScrollViewDelegate {
     @objc fileprivate func clickScroll() -> Void {
         if imageURLArray.count != 0 {
             if delegate != nil {
-                delegate!.didSelectHJBannerView(index: cycleIndex)
+                delegate!.didSelectHJBannerView(index: bannerIndex)
             }
             
         }
@@ -217,26 +217,26 @@ class HJBannerView: UIView, UIScrollViewDelegate {
     }
     
     func scrollViewDidEndScrollingAnimation(_ scrollView: UIScrollView) {
-        cycleIndex = cycleIndex + 1
-        leftCycleIndex = cycleIndex - 1
-        rightCycleIndex = cycleIndex + 1
+        bannerIndex = bannerIndex + 1
+        leftBannerIndex = bannerIndex - 1
+        rightBannerIndex = bannerIndex + 1
         
-        if cycleIndex == imageURLArray.count - 1 {
-            rightCycleIndex = 0
+        if bannerIndex == imageURLArray.count - 1 {
+            rightBannerIndex = 0
         }
-        if cycleIndex == imageURLArray.count {
-            cycleIndex = 0
-            leftCycleIndex = imageURLArray.count - 1
-            rightCycleIndex = cycleIndex + 1
+        if bannerIndex == imageURLArray.count {
+            bannerIndex = 0
+            leftBannerIndex = imageURLArray.count - 1
+            rightBannerIndex = bannerIndex + 1
         }
         
-//        print("left:\(leftCycleIndex) center:\(cycleIndex) right:\(rightCycleIndex)")
+//        print("left:\(leftBannerIndex) center:\(cycleIndex) right:\(rightBannerIndex)")
         
-        leftImageView?.kf.setImage(with: URL(string: imageURLArray[leftCycleIndex] as! String))
-        centerImageView?.kf.setImage(with: URL(string: imageURLArray[cycleIndex] as! String))
-        rightImageView?.kf.setImage(with: URL(string: imageURLArray[rightCycleIndex] as! String))
+        leftImageView?.kf.setImage(with: URL(string: imageURLArray[leftBannerIndex] as! String))
+        centerImageView?.kf.setImage(with: URL(string: imageURLArray[bannerIndex] as! String))
+        rightImageView?.kf.setImage(with: URL(string: imageURLArray[rightBannerIndex] as! String))
         scroll?.setContentOffset(CGPoint(x:hjBannerViewWidth! * 1, y:0), animated: false)
-        pageControl?.currentPage = cycleIndex;
+        pageControl?.currentPage = bannerIndex;
     }
     
     func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
@@ -249,38 +249,38 @@ class HJBannerView: UIView, UIScrollViewDelegate {
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
 //        print(scroll!.contentOffset.x / hjBannerViewWidth!)
         if scroll!.contentOffset.x / hjBannerViewWidth! == 0.0 {
-            cycleIndex = cycleIndex - 1
-            leftCycleIndex = cycleIndex - 1
-            rightCycleIndex = cycleIndex + 1
+            bannerIndex = bannerIndex - 1
+            leftBannerIndex = bannerIndex - 1
+            rightBannerIndex = bannerIndex + 1
             
             
         } else if scroll!.contentOffset.x / hjBannerViewWidth! == 1.0 {
             
         } else if scroll!.contentOffset.x / hjBannerViewWidth! == 2.0 {
-            cycleIndex = cycleIndex + 1
-            leftCycleIndex = cycleIndex - 1
-            rightCycleIndex = cycleIndex + 1
+            bannerIndex = bannerIndex + 1
+            leftBannerIndex = bannerIndex - 1
+            rightBannerIndex = bannerIndex + 1
         } else {}
         
-        if cycleIndex == imageURLArray.count - 1 {
-            rightCycleIndex = 0
+        if bannerIndex == imageURLArray.count - 1 {
+            rightBannerIndex = 0
         }
-        if cycleIndex == imageURLArray.count || cycleIndex == 0{
-            cycleIndex = 0
-            leftCycleIndex = imageURLArray.count - 1
-            rightCycleIndex = cycleIndex + 1
+        if bannerIndex == imageURLArray.count || bannerIndex == 0{
+            bannerIndex = 0
+            leftBannerIndex = imageURLArray.count - 1
+            rightBannerIndex = bannerIndex + 1
         }
-        if cycleIndex == -1 {
-            cycleIndex = imageURLArray.count - 1
-            leftCycleIndex = cycleIndex - 1
-            rightCycleIndex = 0
+        if bannerIndex == -1 {
+            bannerIndex = imageURLArray.count - 1
+            leftBannerIndex = bannerIndex - 1
+            rightBannerIndex = 0
         }
         
-        leftImageView?.kf.setImage(with: URL(string: imageURLArray[leftCycleIndex] as! String))
-        centerImageView?.kf.setImage(with: URL(string: imageURLArray[cycleIndex] as! String))
-        rightImageView?.kf.setImage(with: URL(string: imageURLArray[rightCycleIndex] as! String))
+        leftImageView?.kf.setImage(with: URL(string: imageURLArray[leftBannerIndex] as! String))
+        centerImageView?.kf.setImage(with: URL(string: imageURLArray[bannerIndex] as! String))
+        rightImageView?.kf.setImage(with: URL(string: imageURLArray[rightBannerIndex] as! String))
         scroll?.setContentOffset(CGPoint(x:hjBannerViewWidth! * 1, y:0), animated: false)
-        pageControl?.currentPage = cycleIndex;
+        pageControl?.currentPage = bannerIndex;
         hjBannerViewStart()
     }
 

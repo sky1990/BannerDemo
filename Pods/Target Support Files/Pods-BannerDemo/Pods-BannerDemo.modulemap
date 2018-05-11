@@ -1,0 +1,6 @@
+module Pods_BannerDemo [system] {
+  umbrella header "Pods-BannerDemo-umbrella.h"
+
+  export *
+  module * { export * }
+}

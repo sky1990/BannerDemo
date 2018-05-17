@@ -31,12 +31,17 @@ class ViewController: UIViewController, HJBannerViewDelegate {
             make.height.equalTo(180)
         }
         
-        banner.imageURLs = ["https://ss2.baidu.com/6ONYsjip0QIZ8tyhnq/it/u=303603140,3184148043&fm=175&s=5F20B946F4B3379C05D9B9060100C0C2&w=640&h=853&img.JPEG",
-                           "https://ss1.baidu.com/6ONXsjip0QIZ8tyhnq/it/u=2265243523,4221178339&fm=173&s=73BE27660B434E55361EA26F0300D07B&w=317&h=321&img.JPG",
-                           "https://ss1.baidu.com/6ONXsjip0QIZ8tyhnq/it/u=3967922392,606741558&fm=175&s=42B039C6A996A69C7F79B1160300C0C1&w=640&h=853&img.JPEG",
-                           "https://ss0.baidu.com/6ONWsjip0QIZ8tyhnq/it/u=563166834,3735424302&fm=175&s=0A125D87B8F2D184B69CCCB6030050E1&w=640&h=853&img.JPEG",
-                           "https://ss2.baidu.com/6ONYsjip0QIZ8tyhnq/it/u=4178677268,2322341897&fm=173&s=98D3A14C582AAC1FAC5CA81B030090C3&w=600&h=319&img.JPG",
-                           "https://ss1.baidu.com/6ONXsjip0QIZ8tyhnq/it/u=3640343134,972389242&fm=173&s=F61C14C65403A51F9AB3A4680300201B&w=640&h=426&img.JPEG",]
+        banner.imageURLs = ["https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1526554359903&di=8c808b70af75984438d11c8d8ba48486&imgtype=jpg&src=http%3A%2F%2Fimg3.imgtn.bdimg.com%2Fit%2Fu%3D3450281778%2C3068234180%26fm%3D214%26gp%3D0.jpg",
+                            
+                           "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1526554251388&di=33495fceaff187129cd180660a5a1bfd&imgtype=0&src=http%3A%2F%2Fpic.58pic.com%2F58pic%2F13%2F56%2F99%2F88f58PICuBh_1024.jpg",
+                           
+                           "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1526554354216&di=98f2f921627d83fac16c2786f920e151&imgtype=0&src=http%3A%2F%2Fimage.tianjimedia.com%2FuploadImages%2F2016%2F330%2F15%2F802AX9R1IB42.jpg",
+                           
+                           "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1526554354214&di=c06afcf26f0e13ed0b29d02a3b3dc42f&imgtype=0&src=http%3A%2F%2Fimage.tianjimedia.com%2FuploadImages%2F2016%2F330%2F58%2F9VH9HT022Y2Z.jpg",
+                           
+                           "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1526554354209&di=3587768c6624074d20dad9e29da731a2&imgtype=0&src=http%3A%2F%2Fimage.tianjimedia.com%2FuploadImages%2F2016%2F330%2F58%2F152CJ2E316I8.jpg",
+                           
+                           "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1526554409988&di=6f62d4cb6ae7e9c2c1dc2b051301b6f8&imgtype=0&src=http%3A%2F%2Fimage.tianjimedia.com%2FuploadImages%2F2016%2F330%2F02%2FNQ3IIDJJ8W29.jpg",]
         
     }
     
